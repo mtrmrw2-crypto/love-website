@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Secret Love</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        width: 300px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    input {
+        padding: 10px;
+        width: 90%;
+        margin-top: 15px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background: #e63946;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    p {
+        color: #e63946;
+        display: none;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>🔒 ❤️Enter the special day❤️ </h2>
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="checkPassword()">Open</button>
+    <p id="error">يوم القطر يروح قلبي❤️</p>
+</div>
+
+<script>
+    function checkPassword() {
+        const correctPassword = "6/2"; // 🔑 CHANGE PASSWORD HERE
+        const input = document.getElementById("password").value;
+
+        if (input === correctPassword) {
+            window.location.href = "love.html";
+        } else {
+            document.getElementById("error").style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
